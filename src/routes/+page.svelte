@@ -19,33 +19,6 @@ let options = {
 </script>
 
 <style lang="scss">
-.q {
-	display: flex;
-	flex-direction: column;
-	gap: 1.5em;
-}
-
-.prompt {
-	font-weight: bold;
-}
-
-#actions {
-	display: flex;
-	justify-content: center;
-	padding: 2em;
-	
-	button {
-		font-family: inherit;
-		font-size: inherit;
-		color: #edf2f9;
-		display: block;
-		padding: .8em 1.6em;
-		border-radius: 8px;
-		cursor: pointer;
-		background: #1c4b91;
-	}
-}
-
 #details {
 	font-size: .9em;
 }
@@ -78,14 +51,45 @@ table {
 	text-align: center;
 }
 
-ol {
-	li:not(:last-child) {
+.item {
+	display: flex;
+	gap: .5em;
+	
+	&:not(:last-child) {
 		margin-bottom: 3em;
 	}
 }
 
-ol::marker {
-	font-family: var(--fontFamily);
+.marker {
+	font-weight: bold;
+	margin-left: 1.5em;
+}
+
+.q {
+	display: flex;
+	flex-direction: column;
+	gap: 1.2em;
+}
+
+.prompt {
+	font-weight: bold;
+}
+
+#actions {
+	display: flex;
+	justify-content: center;
+	padding: 2em;
+	
+	button {
+		font-family: inherit;
+		font-size: inherit;
+		color: #edf2f9;
+		display: block;
+		padding: .8em 1.6em;
+		border-radius: 8px;
+		cursor: pointer;
+		background: #1c4b91;
+	}
 }
 </style>
 
@@ -127,10 +131,13 @@ ol::marker {
 	</div>
 	<form method="POST" action="/submit">
 		<input type="hidden" name="questions" value={JSON.stringify(questions)}>
-		<ol>
+		<div id="items">
 			{#each questions as {type, q}, i}
 				{@const id = "q-" + i}
-				<li>
+				<div class="item">
+					<div class="marker">
+						{i + 1}.
+					</div>
 					<div class="q">
 						<div class="prompt" {id}>
 							<!--{i + 1}. {q}-->
@@ -140,9 +147,9 @@ ol::marker {
 							<Radio ariaLabelledBy={id} name={"q_" + i} options={options[type]}/>
 						</div>
 					</div>
-				</li>
+				</div>
 			{/each}
-		</ol>
+		</div>
 		<div id="actions">
 			<button type="submit">Submit</button>
 		</div>

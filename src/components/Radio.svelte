@@ -61,7 +61,8 @@ let main = $state();
 #main {
 	display: flex;
 	flex-wrap: wrap;
-	gap: 1em;
+	column-gap: 1em;
+	row-gap: 1em;
 }
 
 .option {
