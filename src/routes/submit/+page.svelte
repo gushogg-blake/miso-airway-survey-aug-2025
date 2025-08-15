@@ -9,8 +9,6 @@ let {
 
 let uid = $state(form?.uid);
 let submissionsReceived = $state(data.submissionsReceived);
-
-console.log(submissionsReceived);
 </script>
 
 <style lang="scss">

@@ -29,6 +29,7 @@ let {children} = $props();
 #footer {
 	font-size: .9em;
 	color: #606060;
+	margin-top: 3em;
 	border-top: 1px solid #c0c0c0;
 	padding-top: .8rem;
 	
@@ -62,7 +63,9 @@ let {children} = $props();
 	</div>
 	<div class="col">
 		<div id="footer">
-			&copy; 2025 Gus Hogg-Blake. The code for this survey is available on <a href="//github.com/gushogg-blake/miso-airway-survey-aug-2025">GitHub</a>.
+			<a href="/dataprocessing">Data Processing Policy</a>
+			<br><br>
+			The code for this survey is available on <a href="//github.com/gushogg-blake/miso-airway-survey-aug-2025">GitHub</a>.
 			<br><br>
 			Contact: <a href="mailto:gus@gushogg-blake.com?subject=Misophonia+and+Airway%2FMyofunction+Survey">gus@gushogg-blake.com</a>
 			<Gap heightEm={3}/>

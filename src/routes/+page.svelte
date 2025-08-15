@@ -80,7 +80,7 @@ table {
 #actions {
 	display: flex;
 	justify-content: center;
-	padding: 2em;
+	//padding: 2em;
 	
 	button {
 		font-family: inherit;
@@ -88,6 +88,7 @@ table {
 		color: #edf2f9;
 		display: block;
 		padding: .8em 1.6em;
+		border: 2px solid #0b2c5c;
 		border-radius: 8px;
 		cursor: pointer;
 		background: #1c4b91;
@@ -152,6 +153,7 @@ table {
 				</div>
 			{/each}
 		</div>
+		<Gap heightEm={2}/>
 		<div id="actions">
 			<button type="submit">Submit responses</button>
 		</div>
