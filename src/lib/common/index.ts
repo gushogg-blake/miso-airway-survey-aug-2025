@@ -47,7 +47,7 @@ When drinking, do you use an adult swallow pattern?
 
 yesnonotsure
 
-Have you had any teeth removed due to crowding?
+Have you had any non-wisdom teeth removed due to crowding?
 
 yesno
 
