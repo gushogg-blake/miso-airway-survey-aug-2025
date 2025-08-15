@@ -25,7 +25,9 @@ console.log(submissionsReceived);
 	{/if}
 	<p> The results will be published in September 2025.</p>
 	<p> Subscribe to <a href="//misocfd.substack.com">Misophonia and Craniofacial Dystrophy</a> to receive updates.</p>
-	<p> Submissions received: {n(submissionsReceived)}.</p>
+	<!--{#if submissionsReceived > 100}-->
+	<!--	<p> Submissions received: {n(submissionsReceived)}.</p>-->
+	<!--{/if}-->
 	<p align=center> <a href="/">Back to survey</a></p>
 	<p> &nbsp;</p>
 </div>
