@@ -21,6 +21,8 @@ let options = {
 <style lang="scss">
 #details {
 	font-size: .9em;
+	border-bottom: 1px solid #c0c0c0;
+	padding-bottom: 1em;
 }
 
 #info {
@@ -95,7 +97,7 @@ table {
 
 <div id="main">
 	<div id="intro">
-		<p> This is an independent, preliminary investigation into the connection between misophonia and airway/myofunctional health. The results will be used to inform patient advocacy regarding future research directions.
+		<p> This is an independent, preliminary investigation into the connection between misophonia and airway/myofunctional health. The results will be used to inform patient advocacy on future research directions.
 		<p> Submissions are anonymous. After completing the survey, you will be given a unique ID to manage your submission.
 	</div>
 	<Gap heightEm={1}/>
@@ -121,11 +123,11 @@ table {
 			</tbody>
 		</table>
 	</div>
-	<Gap heightEm={1}/>
+	<Gap heightEm={2}/>
 	<div id="subtitle">
 		Questions
 	</div>
-	<Gap heightEm={1}/>
+	<Gap heightEm={2}/>
 	<div id="info">
 		<p> All questions are optional.</p>
 	</div>
@@ -151,7 +153,7 @@ table {
 			{/each}
 		</div>
 		<div id="actions">
-			<button type="submit">Submit</button>
+			<button type="submit">Submit responses</button>
 		</div>
 	</form>
 </div>

@@ -42,6 +42,10 @@ let {children} = $props();
 }
 </style>
 
+<svelte:head>
+	<title>Misophonia and Airway/Myofunction Survey August 2025</title>
+</svelte:head>
+
 <div id="main">
 	<div id="top">
 		<div class="col">

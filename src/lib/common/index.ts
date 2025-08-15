@@ -39,7 +39,7 @@ Does your tongue naturally rest suctioned to the roof of your mouth?
 
 yesnonotsure
 
-When eating, do you use an adult swallow pattern? (An adult swallow pattern involves pressing the tongue upwards and can be done while maintaining a blank expression, whereas an infant swallow pattern recruits the cheek muscles and involves lip movement. Many adults still use an infant swallow!)
+When eating, do you use an adult swallow pattern? (An adult swallow pattern involves pressing the tongue upwards and can be done while maintaining a blank expression, whereas an infant swallow pattern uses the cheek muscles and involves lip movement. Many adults still use an infant swallow!)
 
 yesnonotsure
 
