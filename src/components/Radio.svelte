@@ -60,6 +60,7 @@ let main = $state();
 <style lang="scss">
 #main {
 	display: flex;
+	flex-wrap: wrap;
 	gap: 1em;
 }
 

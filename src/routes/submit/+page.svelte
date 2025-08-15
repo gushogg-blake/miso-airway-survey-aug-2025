@@ -1,7 +1,12 @@
 <script lang="ts">
 import {onMount, getContext} from "svelte";
 
+let {
+	data,
+	form,
+} = $props();
 
+let uid = $state(form.uid);
 </script>
 
 <style lang="scss">
@@ -9,9 +14,11 @@ import {onMount, getContext} from "svelte";
 </style>
 
 <div id="main">
-	<p> Thanks for taking part in this survey.
+	<p> Thanks for taking part in the survey!
+	<p> Your submission ID is <code>{uid}</code>.
+	<p> <b>If you wish to update or delete your responses, save this ID now as it will not be available after closing the page!</b>
 	<p> The results will be published on 15th September 2025.
-	<p> To receive an announcement, you can subscribe to <a href="//misocfd.substack.com">Misophonia and Craniofacial Dystrophy</a> on Substack.
+	<p> Subscribe to <a href="//misocfd.substack.com">Misophonia and Craniofacial Dystrophy</a> to receive updates.
 	<p align=center> <a href="/">Back to survey</a>
 	<p> &nbsp;
 </div>

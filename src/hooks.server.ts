@@ -31,7 +31,7 @@ async function init({event, resolve}) {
 	if (!uid) {
 		uid = randomBytes(16).toString("hex");
 		
-		cookies.set("uid", uid, {path:"/"});
+		//cookies.set("uid", uid, {path:"/"});
 	}
 
 	let searchParams = processSearchParams(url.searchParams);

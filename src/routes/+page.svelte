@@ -14,6 +14,7 @@ let submissionsReceived = $state(data.submissionsReceived);
 let options = {
 	yesno: ["Yes", "No"],
 	yesnonotsure: ["Yes", "No", "Not sure"],
+	suction: ["Yes", "Only the tip", "No", "Not sure"],
 };
 </script>
 
@@ -21,11 +22,7 @@ let options = {
 .q {
 	display: flex;
 	flex-direction: column;
-	gap: 1em;
-	
-	&:not(:last-child) {
-		margin-bottom: 2em;
-	}
+	gap: 1.5em;
 }
 
 .prompt {
@@ -54,7 +51,7 @@ let options = {
 }
 
 #info {
-	//font-size: .9em;
+	font-size: .9em;
 	border-radius: 8px;
 	padding: .8rem;
 	background: #f0f0f0;
@@ -69,6 +66,10 @@ table {
 		border: 0;
 		padding: .5em 0;
 	}
+	
+	th {
+		width: 120px;
+	}
 }
 
 #subtitle {
@@ -76,15 +77,30 @@ table {
 	font-weight: bold;
 	text-align: center;
 }
+
+ol {
+	li:not(:last-child) {
+		margin-bottom: 3em;
+	}
+}
+
+ol::marker {
+	font-family: var(--fontFamily);
+}
 </style>
 
 <div id="main">
+	<div id="intro">
+		<p> This is an independent, preliminary investigation into the connection between misophonia and airway/myofunctional health. The results will be used to inform patient advocacy regarding future research directions.
+		<p> Submissions are anonymous. After completing the survey, you will be given a unique ID to manage your submission.
+	</div>
+	<Gap heightEm={1}/>
 	<div id="details">
 		<table>
 			<tbody>
 				<tr>
 					<th>Organiser</th>
-					<td>Gus Hogg-Blake (<a href="mailto:gus@gushogg-blake.com?subject=Misophonia+and+Airway/Myofunction+Survey">gus@gushogg-blake.com</a>)</td>
+					<td>Gus Hogg-Blake</td>
 				</tr>
 				<tr>
 					<th>Start date</th>
@@ -94,10 +110,10 @@ table {
 					<th>End date</th>
 					<td>15 September 2025</td>
 				</tr>
-				<tr>
-					<th>Submissions received</th>
-					<td>{submissionsReceived}</td>
-				</tr>
+				<!--<tr>-->
+				<!--	<th>Submissions received</th>-->
+				<!--	<td>{submissionsReceived}</td>-->
+				<!--</tr>-->
 			</tbody>
 		</table>
 	</div>
@@ -108,23 +124,25 @@ table {
 	<Gap heightEm={1}/>
 	<div id="info">
 		<p> All questions are optional.</p>
-		<p> You can submit the form multiple times; your latest submission will be used.
 	</div>
 	<form method="POST" action="/submit">
 		<input type="hidden" name="questions" value={JSON.stringify(questions)}>
-		<div>
+		<ol>
 			{#each questions as {type, q}, i}
 				{@const id = "q-" + i}
-				<div class="q">
-					<div class="prompt" {id}>
-						{i + 1}. {q}
+				<li>
+					<div class="q">
+						<div class="prompt" {id}>
+							<!--{i + 1}. {q}-->
+							{q}
+						</div>
+						<div class="options">
+							<Radio ariaLabelledBy={id} name={"q_" + i} options={options[type]}/>
+						</div>
 					</div>
-					<div class="options">
-						<Radio ariaLabelledBy={id} name={"q_" + i} options={options[type]}/>
-					</div>
-				</div>
+				</li>
 			{/each}
-		</div>
+		</ol>
 		<div id="actions">
 			<button type="submit">Submit</button>
 		</div>

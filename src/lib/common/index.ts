@@ -13,13 +13,13 @@ yesno
 
 Do you regularly snore?
 
-yesno
+yesnonotsure
 
 Have you been diagnosed with sleep apnea?
 
 yesno
 
-Have you been diagnosed with upper airway resistance syndrome?
+Have you been diagnosed with UARS or sleep-disordered breathing?
 
 yesno
 
@@ -33,7 +33,7 @@ yesnonotsure
 
 Can you suction your tongue to the roof of your mouth?
 
-yesnonotsure
+suction
 
 Does your tongue naturally rest suctioned to the roof of your mouth?
 
