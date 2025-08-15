@@ -1,0 +1,23 @@
+.buttonLink {
+	font-size: 14px;
+	letter-spacing: .3px;
+	text-transform: uppercase;
+	text-decoration: none;
+	color: var(--link-color);
+	display: block;
+	border-radius: 5px;
+	padding: 8px;
+	border: 0;
+	cursor: pointer;
+	background: #f3f4f5;
+	
+	&:not(:disabled) &:hover {
+		text-decoration: underline;
+	}
+	
+	&:disabled {
+		//border: var(--mainBorder);
+		opacity: .7;
+		cursor: default;
+	}
+}

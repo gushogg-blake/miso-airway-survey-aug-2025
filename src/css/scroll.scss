@@ -1,0 +1,30 @@
+.smallscroll {
+	--scrollbarThumbWidth: 8px;
+	--scrollbarPadding: 3px;
+	--scrollbarWidth: calc(var(--scrollbarThumbWidth) + var(--scrollbarPadding) * 2);
+	--scrollbarBackground: white;
+	--scrollbarBorder: 1px solid #d5d5d5;
+	--scrollbarThumbBorder: var(--scrollbarPadding) solid var(--scrollbarBackground);
+	--scrollbarThumbBackground: #B2B2B2;
+	--scrollbarSpacerBackground: var(--appBackground);
+	
+	&::-webkit-scrollbar {
+		width: var(--scrollbarWidth);
+		height: var(--scrollbarWidth);
+	}
+	
+	&::-webkit-scrollbar-thumb {
+		width: var(--scrollbarThumbWidth);
+		height: var(--scrollbarThumbWidth);
+		min-width: 40px;
+		min-height: 40px;
+		border-radius: 8px;
+		border: var(--scrollbarPadding) solid var(--scrollbarBackground);
+		background-clip: content-box;
+		background: var(--scrollbarThumbBackground);
+	}
+	
+	&::-webkit-scrollbar-corner {
+		background: transparent;
+	}
+}
