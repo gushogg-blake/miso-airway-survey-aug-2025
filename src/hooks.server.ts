@@ -4,7 +4,7 @@ import {_typeof} from "utils";
 import {getCore} from "lib/server/core";
 import {sequence} from "@sveltejs/kit/hooks";
 import {handleSession} from "svelte-kit-cookie-session";
-import env from "$env/dynamic/private";
+import {env} from "$env/dynamic/private";
 
 const sessionHandler = handleSession({
 	secret: env.SESSION_SECRET,

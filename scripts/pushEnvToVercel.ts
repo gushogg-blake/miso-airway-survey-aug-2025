@@ -3,7 +3,7 @@ import fs from "node:fs";
 
 $.nothrow();
 
-let s = fs.readFileSync(".env").toString("utf8").trim().split("\n");
+let s = fs.readFileSync(".env").toString("utf8").trim().split("\n").map(s => s.trim()).filter(Boolean);
 
 s = s.map(l => [...l.match(/^([\w_]+)=(.+)$/)].slice(1));
 

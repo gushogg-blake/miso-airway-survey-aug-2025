@@ -9,7 +9,7 @@
 		"migrate-prod": "NODE_ENV=production npm run migrate",
 		"migrate-test": "npm run migrate -- -t",
 		"check-data": "bun scripts/scrape/check.ts",
-		"deploy": "bun scripts/pushEnvToVercel; vercel build --prod && vercel --prebuilt --prod",
+		"deploy": "bun scripts/pushEnvToVercel && vercel build --prod && vercel --prebuilt --prod",
 		"build": "vite build",
 		"preview": "vite preview",
 		"prepare": "svelte-kit sync || echo ''",

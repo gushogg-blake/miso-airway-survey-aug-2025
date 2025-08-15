@@ -60,7 +60,7 @@ let {children} = $props();
 		<div id="footer">
 			&copy; 2025 Gus Hogg-Blake. The code for this survey is available on <a href="//github.com/gushogg-blake/miso-airway-survey-aug-2025">GitHub</a>.
 			<br><br>
-			Get in touch: <a href="mailto:gus@gushogg-blake.com?subject=Misophonia+and+Airway%2FMyofunction+Survey">gus@gushogg-blake.com</a>
+			Contact: <a href="mailto:gus@gushogg-blake.com?subject=Misophonia+and+Airway%2FMyofunction+Survey">gus@gushogg-blake.com</a>
 			<Gap heightEm={3}/>
 		</div>
 	</div>
